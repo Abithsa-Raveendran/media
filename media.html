@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive web page using Media Queries</title>
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Base styles for the whole page */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #379cd7;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        header nav a {
+            color: rgb(24, 2, 2);
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+        }
+
+        .main-content {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .main-content img {
+            max-width: 71%;
+            height: auto;
+        }
+
+        .footer {
+            background-color: #329fe8;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        /* Media Query for Tablet Screens (768px and below) */
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            header nav {
+                font-size: 14px;
+            }
+
+            .main-content img {
+                width: 80%;
+            }
+        }
+
+        /* Media Query for Mobile Screens (480px and below) */
+        @media (max-width: 480px) {
+            header {
+                padding: 10px 0;
+            }
+
+            .main-content img {
+                width: 100%;
+            }
+
+            .footer {
+                font-size: 12px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1> BEAUTY BLOG </h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <div class="container">
+        <div class="main-content">
+            <div class="text">
+                <h2>BEAUTY BLOG</h2>
+                <p>
+                    THIS IS AN EXAMPLE OF A RESPONSIVE DESIGN USING MEDIA QUERIES.
+                </p>
+            </div>
+            <div class="image">
+                <img src="beauty.jpg" id="beauty" alt=" ">
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>@ Responsive Website</p>
+    </footer>
+
+</body>
+</html>
